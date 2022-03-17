@@ -60,7 +60,11 @@ const Navbar = ({
           
         }
 
-        closeNavMenu()
+        if(windowInnerWidth <= 768) {
+          closeNavMenu()
+
+        }
+
       });
     });
 
@@ -109,7 +113,7 @@ const Navbar = ({
   }
 
   const closeNavMenu = () => {
-    const navMenu= document.querySelector('.navbar-menu')
+    const navMenu = document.querySelector('.navbar-menu')
     navMenu.classList.remove('navbar-menu-visible')
     navMenu.classList.add('navbar-menu-hidden')
     const navMenuLinks = document.querySelector('.navbar-menu-content')
